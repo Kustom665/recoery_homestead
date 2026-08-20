@@ -18,6 +18,10 @@ This repo covers land, funding, architecture, permits, and licensure.
 The honest brief: what's real, what's hard, what it costs, and the three things
 that kill projects like this.
 
+**→ [`brief.html`](brief.html)** — the same material as a single designed page,
+for handing to an attorney, an SCA director, or a co-founder who isn't going to
+read a repo. Open it in a browser; it is self-contained apart from webfonts.
+
 ---
 
 ## The four things you should know before reading anything else

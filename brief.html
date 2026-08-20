@@ -1,0 +1,1292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A decision brief for a working-farm recovery community in rural Pennsylvania - the three legal tripwires, where to build, and what it costs.">
+<title>Recovery Homestead Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --paper:        #EDEFE8;
+    --paper-raised: #F7F8F3;
+    --paper-sunk:   #E3E7DE;
+    --ink:          #1B211C;
+    --ink-soft:     #4E5B50;
+    --ink-faint:    #7C8A7E;
+    --rule:         #CBD2C6;
+    --rule-strong:  #A6B1A2;
+    --accent:       #2F5D50;
+    --accent-ink:   #22463C;
+    --accent-soft:  #DDE7E0;
+    --warn:         #8A3A1C;
+    --warn-soft:    #F0E2DA;
+    --contour:      rgba(47, 93, 80, 0.30);
+    --shadow:       rgba(27, 33, 28, 0.07);
+
+    --measure: 66ch;
+    --step--1: clamp(0.78rem, 0.76rem + 0.10vw, 0.84rem);
+    --step-0:  clamp(1.02rem, 0.99rem + 0.16vw, 1.13rem);
+    --step-1:  clamp(1.22rem, 1.15rem + 0.34vw, 1.42rem);
+    --step-2:  clamp(1.50rem, 1.37rem + 0.62vw, 1.94rem);
+    --step-3:  clamp(1.90rem, 1.64rem + 1.24vw, 2.80rem);
+    --step-4:  clamp(2.40rem, 1.90rem + 2.40vw, 4.30rem);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:        #141814;
+      --paper-raised: #1C221D;
+      --paper-sunk:   #0F130F;
+      --ink:          #DFE5DA;
+      --ink-soft:     #A3B0A4;
+      --ink-faint:    #78857A;
+      --rule:         #2C342D;
+      --rule-strong:  #414B42;
+      --accent:       #7CB79E;
+      --accent-ink:   #A6D3BF;
+      --accent-soft:  #1D2A24;
+      --warn:         #D98A67;
+      --warn-soft:    #2E211B;
+      --contour:      rgba(124, 183, 158, 0.24);
+      --shadow:       rgba(0, 0, 0, 0.34);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:        #141814;
+    --paper-raised: #1C221D;
+    --paper-sunk:   #0F130F;
+    --ink:          #DFE5DA;
+    --ink-soft:     #A3B0A4;
+    --ink-faint:    #78857A;
+    --rule:         #2C342D;
+    --rule-strong:  #414B42;
+    --accent:       #7CB79E;
+    --accent-ink:   #A6D3BF;
+    --accent-soft:  #1D2A24;
+    --warn:         #D98A67;
+    --warn-soft:    #2E211B;
+    --contour:      rgba(124, 183, 158, 0.24);
+    --shadow:       rgba(0, 0, 0, 0.34);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: var(--step-0);
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection { background: var(--accent-soft); color: var(--accent-ink); }
+
+  a { color: var(--accent-ink); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 1px; }
+
+  .mono {
+    font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: var(--step--1);
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  /* ---------- masthead ---------- */
+
+  .masthead {
+    position: relative;
+    border-bottom: 1px solid var(--rule-strong);
+    background: var(--paper-sunk);
+    overflow: hidden;
+  }
+
+  #contours {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+  }
+
+  .masthead-inner {
+    position: relative;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: clamp(3rem, 7vw, 6.5rem) clamp(1.25rem, 4vw, 3rem) clamp(2rem, 4vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .designation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.4rem;
+    align-items: baseline;
+  }
+
+  .masthead h1 {
+    font-family: "Bitter", Georgia, serif;
+    font-weight: 700;
+    font-size: var(--step-4);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin: 0;
+    max-width: 18ch;
+    text-wrap: balance;
+  }
+
+  .masthead h1 em {
+    font-style: normal;
+    color: var(--accent-ink);
+  }
+
+  .standfirst {
+    max-width: 54ch;
+    font-size: var(--step-1);
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin: 0;
+    text-wrap: pretty;
+  }
+
+  /* ---------- parcel data grid ---------- */
+
+  .parcel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-top: 0.5rem;
+  }
+
+  .parcel div {
+    background: var(--paper-sunk);
+    padding: 0.9rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .parcel dt {
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0;
+  }
+
+  .parcel dd {
+    margin: 0;
+    font-family: "Bitter", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.16rem;
+    line-height: 1.2;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+  }
+
+  .parcel dd small {
+    display: block;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    letter-spacing: 0;
+    margin-top: 0.15rem;
+  }
+
+  /* ---------- page shell ---------- */
+
+  .shell {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 4vw, 3rem) 6rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  @media (min-width: 1000px) {
+    .shell {
+      grid-template-columns: 190px minmax(0, 1fr);
+      gap: 4rem;
+    }
+  }
+
+  /* ---------- index rail ---------- */
+
+  .rail { display: none; }
+
+  @media (min-width: 1000px) {
+    .rail {
+      display: block;
+      position: sticky;
+      top: 0;
+      align-self: start;
+      padding-top: 3.5rem;
+      max-height: 100vh;
+      overflow-y: auto;
+    }
+  }
+
+  .rail-title {
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 0.75rem;
+  }
+
+  .rail ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .rail a {
+    display: grid;
+    grid-template-columns: 2.1rem 1fr;
+    gap: 0.2rem;
+    padding: 0.4rem 0;
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: 0.76rem;
+    line-height: 1.35;
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-top: 1px solid transparent;
+  }
+
+  .rail a span:first-child { color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+  .rail a:hover { color: var(--accent-ink); }
+  .rail a:hover span:first-child { color: var(--accent); }
+  .rail a[aria-current="true"] { color: var(--accent-ink); }
+  .rail a[aria-current="true"] span:first-child { color: var(--accent); font-weight: 600; }
+
+  /* ---------- article ---------- */
+
+  article { min-width: 0; }
+
+  section {
+    padding-top: 3.5rem;
+    scroll-margin-top: 1.5rem;
+  }
+
+  section > * { max-width: var(--measure); }
+  section > .wide { max-width: none; }
+
+  h2 {
+    font-family: "Bitter", Georgia, serif;
+    font-weight: 700;
+    font-size: var(--step-3);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin: 0.6rem 0 1.1rem;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-family: "Bitter", Georgia, serif;
+    font-weight: 600;
+    font-size: var(--step-1);
+    line-height: 1.25;
+    margin: 2.2rem 0 0.6rem;
+    text-wrap: balance;
+  }
+
+  p { margin: 0 0 1.1rem; text-wrap: pretty; }
+  p:last-child { margin-bottom: 0; }
+
+  strong { font-weight: 600; color: var(--ink); }
+
+  .lede {
+    font-size: var(--step-1);
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+
+  .rule {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 0;
+    max-width: none;
+  }
+
+  /* ---------- enumerated failure modes ---------- */
+
+  .modes {
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--rule);
+    border-block: 1px solid var(--rule);
+    max-width: none;
+  }
+
+  .mode {
+    background: var(--paper);
+    display: grid;
+    grid-template-columns: 3.4rem minmax(0, 1fr);
+    gap: 0 0.5rem;
+    padding: 1.5rem 0;
+  }
+
+  @media (max-width: 620px) {
+    .mode { grid-template-columns: 1fr; gap: 0.5rem; }
+  }
+
+  .mode-num {
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--warn);
+    padding-top: 0.42rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .mode-body { max-width: var(--measure); }
+
+  .mode h3 { margin: 0 0 0.5rem; font-size: var(--step-1); }
+
+  .mode p { margin-bottom: 0.7rem; }
+
+  .verdict {
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: 0.79rem;
+    line-height: 1.5;
+    color: var(--accent-ink);
+    background: var(--accent-soft);
+    padding: 0.6rem 0.8rem;
+    display: block;
+    margin-top: 0.9rem;
+  }
+
+  .verdict b { font-weight: 600; }
+
+  /* ---------- pull statistic ---------- */
+
+  .stat {
+    max-width: none;
+    margin: 2.5rem 0;
+    padding: 1.75rem 0;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 1.5rem;
+  }
+
+  .stat-fig {
+    font-family: "Bitter", Georgia, serif;
+    font-weight: 700;
+    font-size: var(--step-4);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums;
+    color: var(--accent-ink);
+  }
+
+  .stat-cap {
+    font-size: var(--step-1);
+    line-height: 1.35;
+    color: var(--ink);
+    max-width: 26ch;
+    text-wrap: balance;
+  }
+
+  /* ---------- tables ---------- */
+
+  .table-wrap {
+    max-width: none;
+    overflow-x: auto;
+    margin: 1.5rem 0 0.75rem;
+    border-block: 1px solid var(--rule-strong);
+  }
+
+  table {
+    width: 100%;
+    min-width: 620px;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+
+  caption {
+    text-align: left;
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding-bottom: 0.7rem;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 0.72rem 1.1rem 0.72rem 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+
+  thead th {
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    border-bottom: 1px solid var(--rule-strong);
+    padding-top: 0.6rem;
+  }
+
+  tbody th {
+    font-family: "Bitter", Georgia, serif;
+    font-weight: 600;
+    font-size: 0.97rem;
+    white-space: nowrap;
+    padding-right: 1.5rem;
+  }
+
+  tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
+
+  td.num {
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .flag {
+    display: inline-block;
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.18rem 0.45rem;
+    white-space: nowrap;
+    border: 1px solid currentColor;
+  }
+
+  .flag-go   { color: var(--accent); }
+  .flag-stop { color: var(--warn); }
+
+  .note {
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    line-height: 1.55;
+    margin: 0.6rem 0 0;
+  }
+
+  /* ---------- risk callout ---------- */
+
+  .risk {
+    max-width: none;
+    margin: 2rem 0 0;
+    padding: 1.5rem clamp(1.1rem, 3vw, 1.9rem);
+    background: var(--warn-soft);
+    border-left: 3px solid var(--warn);
+  }
+
+  .risk .eyebrow { color: var(--warn); }
+
+  .risk h3 {
+    margin: 0.5rem 0 0.7rem;
+    font-size: var(--step-2);
+    color: var(--ink);
+  }
+
+  .risk p { max-width: var(--measure); }
+  .risk p:last-child { margin-bottom: 0; }
+
+  /* ---------- gated sequence ---------- */
+
+  .gates {
+    list-style: none;
+    counter-reset: gate;
+    margin: 1.75rem 0 0;
+    padding: 0;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gates li {
+    counter-increment: gate;
+    display: grid;
+    grid-template-columns: 2.9rem minmax(0, 1fr);
+    gap: 0 0.5rem;
+    padding: 0 0 1.6rem;
+    position: relative;
+  }
+
+  .gates li::before {
+    content: counter(gate, decimal-leading-zero);
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+    padding-top: 0.22rem;
+    z-index: 1;
+    background: var(--paper);
+  }
+
+  .gates li::after {
+    content: "";
+    position: absolute;
+    left: 0.62rem;
+    top: 1.5rem;
+    bottom: 0;
+    width: 1px;
+    background: var(--rule-strong);
+  }
+
+  .gates li:last-child { padding-bottom: 0; }
+  .gates li:last-child::after { display: none; }
+
+  .gates strong {
+    font-family: "Bitter", Georgia, serif;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  .gates p { max-width: var(--measure); margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* ---------- this week ---------- */
+
+  .calls {
+    max-width: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-top: 1.5rem;
+  }
+
+  .call {
+    background: var(--paper-raised);
+    padding: 1.35rem 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .call h3 {
+    margin: 0;
+    font-size: 1.06rem;
+    line-height: 1.3;
+  }
+
+  .call p { font-size: 0.9rem; color: var(--ink-soft); margin: 0; }
+
+  .call .eyebrow { font-size: 0.64rem; }
+
+  /* ---------- colophon ---------- */
+
+  .colophon {
+    max-width: none;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--ink);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+  }
+
+  .colophon h3 { margin: 0 0 0.6rem; font-size: 1.02rem; }
+  .colophon p { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.55; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    html { scroll-behavior: auto; }
+  }
+
+  @media (min-width: 1000px) {
+    html { scroll-behavior: smooth; }
+  }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <canvas id="contours" aria-hidden="true"></canvas>
+  <div class="masthead-inner">
+    <div class="designation">
+      <span class="eyebrow">Development Brief</span>
+      <span class="eyebrow">Rural Pennsylvania</span>
+      <span class="eyebrow">Rev. August 2026</span>
+    </div>
+
+    <h1>A working farm where <em>recovery</em> builds the place it lives in.</h1>
+
+    <p class="standfirst">
+      Twenty to forty rural acres. Men in long-term recovery live on the land, work
+      it, and raise the cottages themselves. The model is proven and the money is
+      real — the hard part is three legal tripwires that have to be cleared before
+      anyone spends a dollar.
+    </p>
+
+    <dl class="parcel">
+      <div><dt>Land</dt><dd>20–40 ac<small>rural PA</small></dd></div>
+      <div><dt>Residents</dt><dd>16–24<small>at full build-out</small></dd></div>
+      <div><dt>Program</dt><dd>6 mo<small>+ transition tier</small></dd></div>
+      <div><dt>Capital</dt><dd>$1.29–2.90M<small>phases 0–3</small></dd></div>
+      <div><dt>Operating</dt><dd>$299–507K<small>per yr, 16 beds</small></dd></div>
+      <div><dt>Per resident</dt><dd>$51–87<small>per day</small></dd></div>
+    </dl>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="rail" aria-label="Sections">
+    <div class="rail-title">Contents</div>
+    <ol>
+      <li><a href="#model"><span>01</span><span>The model</span></a></li>
+      <li><a href="#tripwires"><span>02</span><span>Three tripwires</span></a></li>
+      <li><a href="#unlock"><span>03</span><span>The unlock</span></a></li>
+      <li><a href="#county"><span>04</span><span>Where to build</span></a></li>
+      <li><a href="#labor"><span>05</span><span>Resident labor</span></a></li>
+      <li><a href="#money"><span>06</span><span>The money</span></a></li>
+      <li><a href="#order"><span>07</span><span>Order of ops</span></a></li>
+      <li><a href="#week"><span>08</span><span>This week</span></a></li>
+    </ol>
+  </nav>
+
+  <article>
+
+    <section id="model">
+      <span class="eyebrow">01 — The model</span>
+      <h2>Proven, legal, and currently funded</h2>
+      <p class="lede">
+        The reference is <strong>Jacob's Ladder at Brookside Farm</strong> in Aurora,
+        West Virginia — the six-month residential program in the 2018 documentary
+        <em>Recovery Boys</em>. Daily farming, mindfulness, 12-step work, chores,
+        structured community.
+      </p>
+      <p>
+        That model works. It is legal. There is real government money for it in
+        Pennsylvania right now, and recovery housing is an explicitly eligible use
+        of county opioid settlement funds. None of that is the hard part.
+      </p>
+      <p>
+        The hard part is that three specific things kill projects like this, and
+        all three are solvable — but only if you know about them <em>before</em> you
+        spend money. Everything downstream of here is about clearing them in the
+        right order.
+      </p>
+    </section>
+
+    <hr class="rule">
+
+    <section id="tripwires">
+      <span class="eyebrow">02 — Three tripwires</span>
+      <h2>What actually shuts these places down</h2>
+      <p>
+        None of these are edge cases. Each one is a routine way a compound like this
+        gets stopped, displaced, or priced out — and each has a known workaround.
+      </p>
+
+      <ol class="modes">
+        <li class="mode">
+          <span class="mode-num">01</span>
+          <div class="mode-body">
+            <h3>Campers are not legal permanent housing</h3>
+            <p>
+              In Pennsylvania, RVs and campers are <strong>not permitted as permanent
+              residences</strong> except inside a properly zoned RV or mobile home
+              park. This is the single most common way a compound gets shut down:
+              someone reports it, the township inspects, residents get displaced.
+            </p>
+            <span class="verdict"><b>Workaround —</b> Buy in a township with no zoning
+              ordinance and use campers as construction-phase housing while permanent
+              cottages go up. The campers stay; their legal role changes.</span>
+          </div>
+        </li>
+
+        <li class="mode">
+          <span class="mode-num">02</span>
+          <div class="mode-body">
+            <h3>One big bunkhouse is a budget bomb</h3>
+            <p>
+              House enough unrelated residents in a single structure and the building
+              code can classify it <strong>R-2, or even I-1 institutional</strong>.
+              That triggers fire sprinklers, commercial egress, and full ADA
+              compliance — six figures nobody planned for.
+            </p>
+            <span class="verdict"><b>Workaround —</b> A cluster of small detached
+              cottages around a shared community building keeps each unit in R-3
+              residential territory. The code strategy and the tiny-home vision point
+              the same direction.</span>
+          </div>
+        </li>
+
+        <li class="mode">
+          <span class="mode-num">03</span>
+          <div class="mode-body">
+            <h3>Licensure is not optional here</h3>
+            <p>
+              DDAP recovery house licensure — Act 59 of 2017, implemented at
+              <span class="mono">28 Pa. Code Ch. 717</span>, effective December 2021 —
+              is required if you accept state or federal funding <em>or</em> referrals
+              from state agencies. The entire funding plan is government money, so it
+              applies. A 2026 bill from Sen. Tracy Pennycuick would extend licensure to
+              <em>all</em> PA recovery residences within three years.
+            </p>
+            <span class="verdict"><b>Consequence —</b> Ch. 717 carries physical-plant
+              requirements. The architecture has to be designed backward from the
+              licensing standard, not retrofitted to it. Read it before any floor plan
+              is final.</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <hr class="rule">
+
+    <section id="unlock">
+      <span class="eyebrow">03 — The unlock</span>
+      <h2>Build where there is no ordinance to fight</h2>
+
+      <div class="stat">
+        <span class="stat-fig">822</span>
+        <span class="stat-cap">Pennsylvania municipalities have no zoning ordinance at all.</span>
+      </div>
+
+      <p>
+        In rural counties only <strong>34%</strong> of municipalities have zoning.
+        Northwest PA runs 30%, central PA 39% — against <strong>99%</strong> in the
+        southeast. Nearly 35% of all land area across the twelve southwestern
+        counties has no zoning of any kind.
+      </p>
+      <p>
+        In an unzoned township there is no variance to win, no hearing to survive,
+        and no neighbor petition to fight. The state building code and DEP sewage
+        rules still apply — those are not local — but the political battle simply
+        does not exist. <strong>This is the highest-leverage decision in the
+        project.</strong>
+      </p>
+
+      <h3>The county-backstop trap</h3>
+      <p>
+        "This township has no zoning ordinance" does <strong>not</strong> mean the
+        land is unzoned. A county can adopt a countywide ordinance that fills in
+        automatically wherever a municipality has none. Two of the counties people
+        reach for first are exactly this case — Schuylkill adopted a countywide
+        backstop effective 27 December 2010, and Fayette administers zoning for 31
+        of its 42 municipalities.
+      </p>
+      <p>
+        So the question is never "does this township have zoning?" It is
+        <strong>"does this township have zoning, <em>and</em> does the county have a
+        backstop ordinance?"</strong> Ask both, in writing, of the county planning
+        office. That one question separates a by-right build from a nine-month
+        hearing calendar.
+      </p>
+
+      <h3>And if you do land somewhere zoned</h3>
+      <p>
+        The Fair Housing Act is the weapon, not the fallback. People in recovery
+        from substance use disorder are a protected class, provided they are not
+        currently using illegal drugs. There is direct Pennsylvania precedent: the
+        United States sued the <strong>Township of Cheltenham</strong> over a denied
+        variance and the township had to amend its ordinance to provide reasonable
+        accommodations. In <em>Janush v. Township of Upper Southampton</em>, a
+        1,000-foot group-home dispersion requirement was held to violate the FHAA.
+      </p>
+      <p>
+        A formal <strong>reasonable accommodation request</strong> is a different and
+        stronger ask than a variance, with a lower burden on the applicant. Send it
+        through an attorney.
+      </p>
+    </section>
+
+    <hr class="rule">
+
+    <section id="county">
+      <span class="eyebrow">04 — Where to build</span>
+      <h2>The choice collapses to one question</h2>
+      <p>
+        Score every candidate on four axes, not one: cheap land, unzoned townships,
+        overdose burden, and USDA rural eligibility. The third is the
+        counterintuitive one — <strong>you want to build where the problem is
+        worst.</strong> That is where the settlement money is, where the referrals
+        are, and where a county commissioner returns your call.
+      </p>
+
+      <div class="table-wrap wide">
+        <table>
+          <caption>Candidate counties — zoning posture and land cost</caption>
+          <thead>
+            <tr>
+              <th scope="col">County</th>
+              <th scope="col">Zoning posture</th>
+              <th scope="col">Land, median/acre</th>
+              <th scope="col">Overdose rate</th>
+              <th scope="col">Build type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Susquehanna</th>
+              <td>6 of 40 municipalities zoned; <strong>no county backstop</strong>, SALDO only</td>
+              <td class="num">~$9,300 <small>sold</small></td>
+              <td>Among state's highest</td>
+              <td><span class="flag flag-go">By right</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Westmoreland</th>
+              <td>No county zoning ordinance</td>
+              <td class="num">Moderate</td>
+              <td class="num">~30 / 100k</td>
+              <td><span class="flag flag-go">Mostly by right</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Fayette</th>
+              <td>County administers 31 of 42; effectively fully zoned</td>
+              <td class="num">Cheap</td>
+              <td class="num">~35 / 100k</td>
+              <td><span class="flag flag-stop">Zoning process</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Schuylkill</th>
+              <td>Countywide backstop since 2010 — <strong>no unzoned land exists</strong></td>
+              <td class="num">~$16,667 <small>small lots</small></td>
+              <td>Elevated</td>
+              <td><span class="flag flag-stop">Zoning process</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Lancaster</th>
+              <td>99% of southeastern PA zoned; ~125,000 ac under preservation easement</td>
+              <td class="num">~$22,000</td>
+              <td>Low</td>
+              <td><span class="flag flag-stop">Excluded</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">
+        Per-acre medians are computed across all parcel sizes, and small lots carry
+        far higher per-acre prices than large tracts. A 30–40 acre wooded parcel
+        should come in below the county median, not at it. Budget from the sold-price
+        column, never the asking-price column. PA median runs ~$16,500/acre.
+      </p>
+
+      <h3>The honest way to decide</h3>
+      <p>
+        <strong>Susquehanna is the only county on the list where you can build by
+        right</strong> — roughly 85% of it unzoned, no countywide backstop, and a
+        planning commission that states in writing it "cannot, under its Ordinance,
+        tell someone they cannot propose a specific type of development on a specific
+        piece of land." Nothing else in the state combines all four axes. The price
+        is a 2.5–3 hour drive from a Berks/Bucks base, and that cost is not small.
+      </p>
+      <p>
+        If you will realistically be on site several times a week for the first two
+        years, <strong>distance beats zoning</strong> — take Schuylkill and budget for
+        the land-use attorney. If this is a build-it-and-staff-it project where you
+        are not the daily presence, <strong>take Susquehanna and build by right.</strong>
+      </p>
+      <p>
+        What you cannot do is split the difference: buying in a Schuylkill township
+        with no municipal ordinance does not make you unzoned. The county ordinance
+        covers you.
+      </p>
+    </section>
+
+    <hr class="rule">
+
+    <section id="labor">
+      <span class="eyebrow">05 — Resident labor</span>
+      <h2>The risk nobody warns you about</h2>
+
+      <div class="risk wide">
+        <span class="eyebrow">Must resolve before construction</span>
+        <h3>Sweat equity has a federal wage-law edge</h3>
+        <p>
+          Residents building and farming the place is the therapeutic heart of the
+          Recovery Boys model. It is genuinely good for people. But work-based
+          rehabilitation programs have drawn federal <strong>Fair Labor Standards
+          Act</strong> enforcement over unpaid resident labor.
+        </p>
+        <p>
+          The analysis turns on details — who benefits, whether the work is primarily
+          therapeutic or primarily economic, and whether the program sells what
+          residents produce. That last one matters here: the moment the farm sells
+          produce, the calculus shifts.
+        </p>
+        <p>
+          Sweat equity is workable. The structure around it needs an attorney
+          <strong>before the first resident swings a hammer.</strong> This is a
+          must-resolve, not a footnote.
+        </p>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section id="money">
+      <span class="eyebrow">06 — The money</span>
+      <h2>A stack that starts with one gating item</h2>
+      <p>
+        <strong>Almost every dollar requires a 501(c)(3).</strong> That is the first
+        move, not the fifth. If you want to chase money before your own determination
+        letter lands, a <strong>fiscal sponsor</strong> — an existing 501(c)(3) that
+        accepts grants on your behalf for 5–10% — is the bridge.
+      </p>
+
+      <div class="table-wrap wide">
+        <table>
+          <caption>Tier 1 — go after these first</caption>
+          <thead>
+            <tr>
+              <th scope="col">Source</th>
+              <th scope="col">What it pays for</th>
+              <th scope="col">Scale</th>
+              <th scope="col">Gate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">County opioid settlement</th>
+              <td>Recovery housing is an explicitly eligible use. 70% of PA's allocation flows to counties.</td>
+              <td class="num">Montgomery: $59.7M</td>
+              <td>501(c)(3)</td>
+            </tr>
+            <tr>
+              <th scope="row">USDA Community Facilities</th>
+              <td>Transitional housing is a listed "essential community facility." Purchase, construct, equip.</td>
+              <td class="num">40-yr loan<br>Grant ≤ $50,000</td>
+              <td>Municipality ≤ 20,000</td>
+            </tr>
+            <tr>
+              <th scope="row">PHFA — PHARE</th>
+              <td>State housing trust fund. Eligible uses include "innovative housing solutions."</td>
+              <td class="num">$85M+ available</td>
+              <td>Annual cycle</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">
+        The USDA grant is small — the loan is the point. Forty-year money with no
+        fees, no prepayment penalty, and no prevailing wage requirement beats
+        anything a bank will offer, and it is designed for exactly this. PHARE has
+        funded ~400 initiatives across all 67 counties; confirm the current deadline
+        directly with PHFA rather than relying on last year's date.
+      </p>
+
+      <h3>The relationship that decides whether beds fill</h3>
+      <p>
+        Every PA county has a <strong>Single County Authority</strong> — the local
+        drug and alcohol commission. It is less a funding source than the entity that
+        controls referrals, and a recovery residence with no referral pipeline is an
+        empty building with a mortgage.
+      </p>
+      <p>
+        Meet them <em>before</em> you buy land. Ask what they are short of. If the
+        answer is "we have nowhere to send men who need six months," you have just
+        validated the entire model — and earned a letter of support for every grant
+        application you will ever write.
+      </p>
+
+      <div class="stat">
+        <span class="stat-fig">$51–87</span>
+        <span class="stat-cap">Cost per resident per day — the figure that wins grant applications.</span>
+      </div>
+      <p>
+        That number compares very favorably to inpatient treatment or incarceration.
+        Pull your county's real figures for the contrast and put them side by side in
+        the narrative.
+      </p>
+    </section>
+
+    <hr class="rule">
+
+    <section id="order">
+      <span class="eyebrow">07 — Order of operations</span>
+      <h2>Each step gates the next</h2>
+      <p>
+        These are genuinely sequential. Doing them out of order is how people end up
+        owning land they cannot build on, or a permit they cannot fund.
+      </p>
+
+      <ol class="gates">
+        <li>
+          <div>
+            <strong>Form the 501(c)(3)</strong>
+            <p>The gating item — almost every funding source requires it. A fiscal sponsor bridges the gap while your determination letter is pending.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Pick the county</strong>
+            <p>Score on all four axes. Confirm the county-backstop question in writing before going further.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Find parcels in unzoned townships</strong>
+            <p>Within the chosen county, and only after the backstop question is answered.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Run the three kill tests</strong>
+            <p>Perc test, geology and nitrate check, easement check. Any one fails, walk away. Touring parcels before this is how people fall in love with land they legally cannot build on.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Line up the money before closing</strong>
+            <p>A signed agreement of sale with a long due-diligence period locks the parcel while the capital stack assembles.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Then build, in phases</strong>
+            <p>Campers as construction-phase housing, cottages as the end state, designed backward from Ch. 717.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <hr class="rule">
+
+    <section id="week">
+      <span class="eyebrow">08 — This week</span>
+      <h2>Three calls, all free, all change what you build</h2>
+
+      <div class="calls wide">
+        <div class="call">
+          <span class="eyebrow">Call 01</span>
+          <h3>Two PA land-use attorneys</h3>
+          <p>Book consultations. The most important hire in the project — zoning, easements, entity structure, and the resident-labor question all land here.</p>
+        </div>
+        <div class="call">
+          <span class="eyebrow">Call 02</span>
+          <h3>The Single County Authority</h3>
+          <p>In your target county. Ask what they are short of. Referrals decide whether your beds fill, and their answer is your grant narrative.</p>
+        </div>
+        <div class="call">
+          <span class="eyebrow">Call 03</span>
+          <h3>Download 28 Pa. Code Ch. 717</h3>
+          <p>Read it. Its physical-plant requirements are architectural constraints — every floor plan should be designed backward from them.</p>
+        </div>
+      </div>
+
+      <div class="colophon wide">
+        <div>
+          <h3>Every figure is a planning range</h3>
+          <p>
+            Not a quote. These numbers exist to size a grant request and show what
+            you are walking into. Replace each one with a real bid before committing.
+            Program deadlines and dollar amounts change — verify current windows
+            directly with each funder.
+          </p>
+        </div>
+        <div>
+          <h3>This is not legal advice</h3>
+          <p>
+            Two professionals are non-negotiable, and both pay for themselves several
+            times over on a project like this: a <strong>Pennsylvania land-use
+            attorney</strong> for zoning, easements, entity structure and the labor
+            question, and a <strong>PA-licensed architect or engineer</strong> for
+            stamped drawings. Budget for both in Phase 0, not Phase 3.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </article>
+</div>
+
+<script>
+(function () {
+  var canvas = document.getElementById("contours");
+  if (!canvas) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  var W = 0, H = 0, dpr = 1;
+  var CELL = 13;
+  var LEVELS = [-1.15, -0.75, -0.35, 0.05, 0.45, 0.85, 1.25];
+  var stroke = "rgba(47,93,80,0.3)";
+
+  function readStroke() {
+    var v = getComputedStyle(document.documentElement)
+      .getPropertyValue("--contour").trim();
+    if (v) stroke = v;
+  }
+
+  function resize() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var r = canvas.getBoundingClientRect();
+    W = Math.max(1, Math.floor(r.width));
+    H = Math.max(1, Math.floor(r.height));
+    canvas.width = Math.floor(W * dpr);
+    canvas.height = Math.floor(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  // Smooth scalar field: sum of sines. Cheap, organic, no texture needed.
+  function field(x, y, t) {
+    return Math.sin(x * 0.0121 + t) * 1.00
+         + Math.cos(y * 0.0163 - t * 0.62) * 0.85
+         + Math.sin((x + y) * 0.0074 + t * 0.41) * 0.70
+         + Math.cos((x - y * 1.7) * 0.0052 - t * 0.28) * 0.55;
+  }
+
+  // Marching squares, linear interpolation on cell edges.
+  function interp(p1, p2, v1, v2, level) {
+    var d = v2 - v1;
+    var m = Math.abs(d) < 1e-6 ? 0.5 : (level - v1) / d;
+    return [p1[0] + (p2[0] - p1[0]) * m, p1[1] + (p2[1] - p1[1]) * m];
+  }
+
+  function draw(t) {
+    ctx.clearRect(0, 0, W, H);
+    ctx.strokeStyle = stroke;
+    ctx.lineWidth = 1;
+    ctx.lineJoin = "round";
+
+    var cols = Math.ceil(W / CELL) + 1;
+    var rows = Math.ceil(H / CELL) + 1;
+
+    // Precompute one row-major grid of field values.
+    var g = new Float32Array(cols * rows);
+    for (var j = 0; j < rows; j++) {
+      for (var i = 0; i < cols; i++) {
+        g[j * cols + i] = field(i * CELL, j * CELL, t);
+      }
+    }
+
+    function seg(a, b) {
+      ctx.moveTo(a[0], a[1]);
+      ctx.lineTo(b[0], b[1]);
+    }
+
+    for (var L = 0; L < LEVELS.length; L++) {
+      var level = LEVELS[L];
+      ctx.beginPath();
+      for (var y = 0; y < rows - 1; y++) {
+        for (var x = 0; x < cols - 1; x++) {
+          var tl = g[y * cols + x],
+              tr = g[y * cols + x + 1],
+              br = g[(y + 1) * cols + x + 1],
+              bl = g[(y + 1) * cols + x];
+
+          var idx = (tl > level ? 8 : 0) | (tr > level ? 4 : 0)
+                  | (br > level ? 2 : 0) | (bl > level ? 1 : 0);
+          if (idx === 0 || idx === 15) continue;
+
+          var pTL = [x * CELL, y * CELL],
+              pTR = [(x + 1) * CELL, y * CELL],
+              pBR = [(x + 1) * CELL, (y + 1) * CELL],
+              pBL = [x * CELL, (y + 1) * CELL];
+
+          var top    = interp(pTL, pTR, tl, tr, level);
+          var right  = interp(pTR, pBR, tr, br, level);
+          var bottom = interp(pBL, pBR, bl, br, level);
+          var left   = interp(pTL, pBL, tl, bl, level);
+
+          switch (idx) {
+            case 1: case 14: seg(left, bottom); break;
+            case 2: case 13: seg(bottom, right); break;
+            case 3: case 12: seg(left, right); break;
+            case 4: case 11: seg(top, right); break;
+            case 6: case 9:  seg(top, bottom); break;
+            case 7: case 8:  seg(left, top); break;
+            case 5:  seg(left, top); seg(bottom, right); break;
+            case 10: seg(left, bottom); seg(top, right); break;
+          }
+        }
+      }
+      ctx.stroke();
+    }
+  }
+
+  var start = null;
+  var raf = null;
+
+  function frame(ts) {
+    if (start === null) start = ts;
+    draw((ts - start) * 0.000035);
+    raf = requestAnimationFrame(frame);
+  }
+
+  function startLoop() {
+    if (raf !== null) cancelAnimationFrame(raf);
+    if (reduce.matches) { draw(0.6); return; }
+    start = null;
+    raf = requestAnimationFrame(frame);
+  }
+
+  function refresh() { readStroke(); resize(); startLoop(); }
+
+  readStroke();
+  resize();
+  startLoop();
+
+  var rt = null;
+  window.addEventListener("resize", function () {
+    clearTimeout(rt);
+    rt = setTimeout(refresh, 140);
+  });
+
+  if (reduce.addEventListener) reduce.addEventListener("change", refresh);
+  var dark = window.matchMedia("(prefers-color-scheme: dark)");
+  if (dark.addEventListener) dark.addEventListener("change", function () {
+    setTimeout(refresh, 30);
+  });
+  new MutationObserver(function () { setTimeout(refresh, 30); })
+    .observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
+  // Rail scroll-spy
+  var links = Array.prototype.slice.call(document.querySelectorAll(".rail a"));
+  var sections = links
+    .map(function (a) { return document.querySelector(a.getAttribute("href")); })
+    .filter(Boolean);
+
+  if (sections.length && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) { a.removeAttribute("aria-current"); });
+        var i = sections.indexOf(e.target);
+        if (i > -1) links[i].setAttribute("aria-current", "true");
+      });
+    }, { rootMargin: "-15% 0px -70% 0px", threshold: 0 });
+    sections.forEach(function (s) { io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>

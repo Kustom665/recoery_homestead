@@ -20,7 +20,12 @@ that kill projects like this.
 
 **→ [`brief.html`](brief.html)** — the same material as a single designed page,
 for handing to an attorney, an SCA director, or a co-founder who isn't going to
-read a repo. Open it in a browser; it is self-contained apart from webfonts.
+read a repo. Open it in a browser. Typefaces load from Google Fonts, so it falls
+back to Georgia without a network connection.
+
+**→ [`brief-offline.html`](brief-offline.html)** — the same page with the
+typefaces embedded. One file, no external requests, ~371 KB. Use this one to
+email, hand over on a USB stick, or open on a machine behind a firewall.
 
 ---
 

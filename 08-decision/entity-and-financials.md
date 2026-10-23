@@ -155,6 +155,15 @@ is a year-one proof.
 | Supplies, vehicle, books | $400 | $600 |
 | **Net** | **$1,325** | **$1,050** |
 
+**Breakeven: 8 beds** against low-end costs, **9 beds** against high-end.
+Each bed above that adds $520–630/mo net.
+
+**Investor coverage, Structure A in the deck (`09-deck/`):** a $139k
+interest-only note at 9% costs **$1,043/mo**. At 10 beds that leaves
+**$7–282/mo**. At 12 beds, $1,265–1,325/mo. The ask is sized at 10 beds; the
+cushion is beds 11 and 12, a lower rate (7% is $811/mo), or Structure B, where
+the investor owns the property and the LLC pays rent.
+
 Plus a farm that can host Harvest Hosts guests (claimed $13–15k/yr, unverified
 for a recovery property) and sell at a stand — both of which trigger the FLSA
 review in `00-START-HERE.md` if residents do the work.
@@ -183,6 +192,7 @@ Nothing else in that model is wrong. It is the right budget for the wrong year.
   private individual with $100–150k who wants a secured return on rural real
   estate with a social story, or a farmhouse seller who would carry paper.
   Ask: $120–160k for the down payment and rehab, secured by the property.
+  **Built: `09-deck/recovery-homestead-investor-deck.pptx`.**
 - **501(c)(3) (Path A):** a **funder** deck. Audience: county opioid settlement
   committee, DDAP, PHARE reviewers, foundations. Ask: $250–500k capital grant
   against a track record.

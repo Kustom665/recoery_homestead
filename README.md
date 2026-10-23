@@ -92,6 +92,10 @@ detached cottages stay R-3. → [`04-architecture/site-plan.md`](04-architecture
 - [`cottage-sourcing.md`](08-decision/cottage-sourcing.md) — Materials spec for the eight cottages, verified 2026 prices by system, two PA SIP makers to call, the ImportYeti workflow and its limits, and delivery logistics for a rural site
 - [`sources.md`](08-decision/sources.md) — Every source from the verification round
 
+### 09 — Pitch deck (added 23 Oct 2026)
+- [`recovery-homestead-investor-deck.pptx`](09-deck/recovery-homestead-investor-deck.pptx) — Thirteen slides, $120–160K investor or seller-finance ask for the year-two farmhouse, built from Pro-forma 2. **For spring 2027, after the leased house has six months of numbers.** Slide 4 is blanks until then. [PDF render](09-deck/recovery-homestead-investor-deck.pdf).
+- [`09-deck/README.md`](09-deck/README.md) — What each slide says, the one number to pressure-test before any meeting, the pre-meeting checklist, and how to rebuild the deck from `build-deck.js`
+
 ---
 
 ## The numbers

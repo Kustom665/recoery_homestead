@@ -89,6 +89,7 @@ detached cottages stay R-3. → [`04-architecture/site-plan.md`](04-architecture
 - [`ceo-decision.md`](08-decision/ceo-decision.md) — **Start here now.** The owner's-money read: three paths, what kills each, the one to act on, with itemized cost, revenue range, kill condition, and a day-by-day roadmap to first revenue
 - [`entity-and-financials.md`](08-decision/entity-and-financials.md) — LLC vs S-corp vs 501(c)(3) vs hybrid, with a pro-forma under each
 - [`land-candidates.md`](08-decision/land-candidates.md) — Real listings with kill-test status; Wyoming County added
+- [`cottage-sourcing.md`](08-decision/cottage-sourcing.md) — Materials spec for the eight cottages, verified 2026 prices by system, two PA SIP makers to call, the ImportYeti workflow and its limits, and delivery logistics for a rural site
 - [`sources.md`](08-decision/sources.md) — Every source from the verification round
 
 ---

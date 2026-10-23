@@ -128,18 +128,25 @@ funding. Pull your county's actual numbers for the contrast.
 | Individual donations and churches | $10,000 – $75,000 | Grows with time and visibility |
 | Foundations | Varies | Year two and beyond |
 
-**The realistic operating model is a blend**, with the SCA contract or per-diem
-relationship as the backbone if you can get it. Build toward that from day one —
-it is the difference between a program that survives its third year and one that
-does not.
+**The realistic operating model is a blend of grants and resident fees.** The
+"SCA contract / per-diem" row above is kept for completeness, but the 23 Oct
+2026 verification round found **no standard SCA per-diem** for recovery houses
+in Pennsylvania — DDAP routes money through SCAs as grants. Treat per-diem as
+zero until an SCA puts a rate in writing. That makes this operating budget a
+fundraising budget. The for-profit alternative, where resident fees carry the
+house, is modeled in `08-decision/entity-and-financials.md`.
 
 ---
 
 ## How to phase the money
 
-1. **Phase 0** — USDA Community Facilities loan (40-year, no fees, no prepayment
-   penalty) plus county opioid settlement capital grant. This is the hardest
-   money to raise because there is nothing to show for it.
+1. **Phase 0** — county opioid settlement capital grant, foundations, and
+   donations. **Not USDA**: the Community Facilities loan requires a
+   feasibility study and repayment history a start-up does not have (see the
+   correction box in `funding-stack.md`). This is the hardest money to raise
+   because there is nothing to show for it — which is why
+   `08-decision/ceo-decision.md` recommends earning the track record in a
+   leased house first.
 2. **Phase 1** — PHARE plus settlement funds. Now you have something visible,
    which makes everything after this easier.
 3. **Phase 2** — PHARE, settlement, foundations. Sweat equity meaningfully

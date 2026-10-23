@@ -2,6 +2,27 @@
 
 Every named program, what it actually pays for, and what gates it.
 
+> **Corrections from the 23 Oct 2026 verification round** — read before the rest.
+>
+> - **USDA Community Facilities is not a Phase 0 source.** Start-up applicants
+>   normally need a third-party feasibility study, must show they cannot get
+>   commercial credit, and must show repayment capacity from revenues. For an
+>   organization with no operating history that is a year-two-plus source. The
+>   "best-kept secret" framing below oversold it.
+> - **No standard SCA per-diem was found.** DDAP funds recovery houses through
+>   grants routed via SCAs, not a published daily rate. Do not build an
+>   operating budget on a per-diem until an SCA puts one in writing.
+> - **DDAP's March 2025 $2M round (up to $500k each) went to five existing
+>   operators** to link people into existing licensed houses. State money
+>   follows a track record; it does not create one.
+> - **Licensure is required only when you take state/federal money or
+>   state-agency referrals.** A private-pay house with private referrals can
+>   open before the license lands. A 2026 bill would change that within three
+>   years.
+>
+> The owner's-money read of all this is in `08-decision/ceo-decision.md`.
+> Sources in `08-decision/sources.md`.
+
 ## The gating item
 
 **Almost all of this requires a 501(c)(3).** That is the first move, not the

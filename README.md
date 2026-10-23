@@ -85,6 +85,12 @@ detached cottages stay R-3. → [`04-architecture/site-plan.md`](04-architecture
 - [`90-day-plan.md`](07-action/90-day-plan.md) — Week by week, starting Monday
 - [`contacts.md`](07-action/contacts.md) — Who to actually call
 
+### 08 — Decision (added 23 Oct 2026)
+- [`ceo-decision.md`](08-decision/ceo-decision.md) — **Start here now.** The owner's-money read: three paths, what kills each, the one to act on, with itemized cost, revenue range, kill condition, and a day-by-day roadmap to first revenue
+- [`entity-and-financials.md`](08-decision/entity-and-financials.md) — LLC vs S-corp vs 501(c)(3) vs hybrid, with a pro-forma under each
+- [`land-candidates.md`](08-decision/land-candidates.md) — Real listings with kill-test status; Wyoming County added
+- [`sources.md`](08-decision/sources.md) — Every source from the verification round
+
 ---
 
 ## The numbers
@@ -106,14 +112,20 @@ numbers for the contrast.
 
 ## Do these three things this week
 
-1. **Call two PA land-use attorneys** and book consultations. Most important
-   hire in the project.
-2. **Call the Single County Authority** in Schuylkill or Fayette. Ask what they
-   are short of. Referrals decide whether your beds fill.
-3. **Download 28 Pa. Code Chapter 717** and read it. Its physical-plant
-   requirements are architectural constraints — design backward from them.
+The 23 Oct 2026 decision round changed the first move. The compound above is
+the year-two-to-three destination; the year-one plan is a leased, licensed
+six-to-eight bed house within 90 minutes of Berks. Full roadmap in
+[`08-decision/ceo-decision.md`](08-decision/ceo-decision.md) section 7.
 
-All three are free. All three change what you build.
+1. **File the PA LLC** ($125) and **call two land-use attorneys**. Book both.
+2. **Call DDAP Licensing, (717) 783-8675** — ask the fee, the timeline, and
+   whether a house with no residents yet can apply.
+3. **Post the live-in house-manager role** in two PA recovery groups and call
+   two treatment-center discharge planners. Ask each: "If I had six licensed
+   beds in 60 days, would you use them?" No credible manager by day 45 is the
+   kill condition.
+
+All three are free or nearly so. The third one decides whether this works.
 
 ---
 
